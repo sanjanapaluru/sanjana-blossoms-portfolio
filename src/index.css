@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Portfolio Design System 2025 - Feminine Soft Aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Soft feminine background palette */
+    --background: 330 25% 98%;
+    --foreground: 330 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass card system */
+    --card: 330 30% 96%;
+    --card-foreground: 330 20% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 330 25% 98%;
+    --popover-foreground: 330 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary blush palette */
+    --primary: 340 55% 75%;
+    --primary-foreground: 0 0% 100%;
+    --primary-soft: 340 45% 85%;
+    --primary-glow: 340 65% 85%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary lavender palette */
+    --secondary: 270 35% 88%;
+    --secondary-foreground: 270 25% 25%;
+    --secondary-soft: 270 25% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted beige tones */
+    --muted: 30 15% 94%;
+    --muted-foreground: 30 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent peach tones */
+    --accent: 20 45% 88%;
+    --accent-foreground: 20 35% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 70%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Soft borders and inputs */
+    --border: 330 20% 90%;
+    --input: 330 20% 92%;
+    --ring: 340 55% 75%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
+
+    /* Gradients for modern backgrounds */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary-soft)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(330 30% 95%), hsl(340 40% 92%), hsl(270 25% 94%));
+    --gradient-glass: linear-gradient(135deg, hsla(330, 30%, 100%, 0.25), hsla(340, 40%, 95%, 0.15));
+    
+    /* Glass morphism effects */
+    --glass-border: hsla(330, 30%, 100%, 0.2);
+    --glass-shadow: 0 8px 32px hsla(340, 25%, 50%, 0.1);
+    --glass-backdrop: blur(12px);
+
+    /* Animation transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +123,57 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+@layer components {
+  /* Glass card effect */
+  .glass-card {
+    @apply backdrop-blur-xl border border-white/20 shadow-lg;
+    background: var(--gradient-glass);
+    box-shadow: var(--glass-shadow);
+  }
+
+  /* Gradient text effect */
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent;
+  }
+
+  /* Smooth hover animations */
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl;
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Fade in on scroll */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-smooth);
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Skill progress bars */
+  .skill-bar {
+    @apply h-2 rounded-full overflow-hidden;
+    background: var(--gradient-glass);
+  }
+
+  .skill-progress {
+    @apply h-full rounded-full bg-gradient-to-r from-primary to-secondary transition-all duration-1000 ease-out;
   }
 }
