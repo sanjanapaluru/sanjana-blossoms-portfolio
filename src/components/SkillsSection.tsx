@@ -31,7 +31,6 @@ const SkillsSection = () => {
       skills: [
         { name: "Python", level: 85 },
         { name: "SQL", level: 80 },
-        { name: "R", level: 65 },
       ]
     },
     {
@@ -41,8 +40,8 @@ const SkillsSection = () => {
       bgColor: "bg-secondary/20",
       skills: [
         { name: "Machine Learning", level: 75 },
-        { name: "Statistical Analysis", level: 70 },
-        { name: "Feature Engineering", level: 68 },
+        { name: "Advanced Analysis", level: 70 },
+        { name: "Data Mining", level: 68 },
       ]
     },
     {
@@ -138,9 +137,9 @@ const SkillsSection = () => {
               </h3>
               <div className="flex flex-wrap justify-center gap-3">
                 {[
-                  "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Excel", 
+                  "Pandas", "NumPy", "Scikit-learn",, "Excel", 
                   "ETL Processes", "Data Mining", "Statistical Modeling", 
-                  "A/B Testing", "Time Series Analysis"
+                  "A/B Testing",
                 ].map((skill) => (
                   <span 
                     key={skill}

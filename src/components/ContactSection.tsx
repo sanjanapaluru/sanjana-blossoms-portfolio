@@ -13,7 +13,7 @@ const ContactSection = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     
     // Simple validation
@@ -36,7 +36,7 @@ const ContactSection = () => {
     setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -47,20 +47,20 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "sanjana.paluru@email.com",
-      link: "mailto:sanjana.paluru@email.com"
+      value: "sanjanapaluruwork03@gmail.com",
+      link: "mailto:sanjanapaluruwork03@gmail.com"
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Hyderabad, India",
+      value: "San Francisco , California",
       link: null
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 9876543210",
-      link: "tel:+919876543210"
+      value: "+1 341-240-9434",
+      link: "tel:+913422409434"
     }
   ];
 
@@ -68,25 +68,26 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "https://linkedin.com/in/sanjana-paluru",
+      link: "https://www.linkedin.com/in/sanjana-paluru/",
       color: "hover:text-blue-600"
     },
     {
       icon: Github,
       label: "GitHub",
-      link: "https://github.com/sanjana-paluru",
+      link: "https://github.com/sanjanapaluru",
       color: "hover:text-gray-800"
     },
     {
       icon: Mail,
       label: "Email",
-      link: "mailto:sanjana.paluru@email.com",
+      link: "mailto:sanjanapaluruwork03@gmail.com",
       color: "hover:text-red-500"
     }
   ];
 
   return (
-    <section className="py-20 relative">
+    <>
+      <section className="py-20 relative">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
@@ -225,6 +226,7 @@ const ContactSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

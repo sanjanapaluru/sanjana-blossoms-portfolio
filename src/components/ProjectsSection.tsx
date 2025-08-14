@@ -107,7 +107,9 @@ const ProjectsSection = () => {
             </p>
             <Button variant="cta" size="lg" className="px-8">
               <Github className="w-5 h-5" />
-              View All Projects on GitHub
+              <a href="https://github.com/sanjanapaluru">
+                View All Projects on GitHub
+              </a>
             </Button>
           </div>
         </div>

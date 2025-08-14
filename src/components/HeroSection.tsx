@@ -1,8 +1,30 @@
 import { Button } from "@/components/ui/button";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
-import profileImage from "@/assets/profile-hero.jpg";
+import profileImage from "@/assets/SanjanaPaluru.jpeg";
 
 const HeroSection = () => {
+
+  const socialLinks = [
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      link: "https://www.linkedin.com/in/sanjana-paluru/",
+      color: "hover:text-blue-600"
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      link: "https://github.com/sanjanapaluru",
+      color: "hover:text-gray-800"
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      link: "mailto:sanjanapaluruwork03@gmail.com",
+      color: "hover:text-red-500"
+    }
+  ];
+  
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated gradient background */}
@@ -61,15 +83,18 @@ const HeroSection = () => {
 
           {/* Social Links */}
           <div className="flex justify-center gap-6">
-            <Button variant="glass" size="icon" className="w-12 h-12">
-              <Linkedin className="w-5 h-5" />
-            </Button>
-            <Button variant="glass" size="icon" className="w-12 h-12">
-              <Github className="w-5 h-5" />
-            </Button>
-            <Button variant="glass" size="icon" className="w-12 h-12">
-              <Mail className="w-5 h-5" />
-            </Button>
+            {socialLinks.map((social) => (
+                    <a
+                      key={social.label}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`w-12 h-12 rounded-xl bg-muted/30 flex items-center justify-center hover:scale-110 transition-all duration-300 ${social.color}`}
+                      aria-label={social.label}
+                    >
+                      <social.icon className="w-6 h-6" />
+                    </a>
+            ))}
           </div>
         </div>
       </div>
