@@ -24,7 +24,7 @@ const HeroSection = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-secondary opacity-75 blur-xl" />
               <img
                 src={profileImage}
-                alt="Sanajana Paluru"
+                alt="Sanjana Paluru"
                 className="relative w-40 h-40 rounded-full object-cover shadow-2xl border-4 border-white/30 hover-lift"
               />
             </div>
@@ -33,7 +33,7 @@ const HeroSection = () => {
           {/* Main heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
             Hi, I'm{" "}
-            <span className="gradient-text">Sanajana Paluru</span>
+            <span className="gradient-text">Sanjana Paluru</span>
           </h1>
 
           {/* Subtitle */}

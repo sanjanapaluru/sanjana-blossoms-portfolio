@@ -50,7 +50,7 @@ const Navigation = () => {
             }}
             className="text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
           >
-            Sanajana
+            Sanjana
           </a>
 
           {/* Desktop Navigation */}

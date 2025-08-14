@@ -19,7 +19,7 @@ const AboutSection = () => {
             {/* Text content */}
             <div className="space-y-6 fade-in">
               <p className="text-lg leading-relaxed text-foreground/90">
-                Hello! I'm Sanajana, a passionate data science enthusiast with a love for uncovering 
+                Hello! I'm Sanjana, a passionate data science enthusiast with a love for uncovering 
                 patterns and insights hidden within complex datasets. I believe that data has the 
                 power to tell incredible stories and drive meaningful change.
               </p>

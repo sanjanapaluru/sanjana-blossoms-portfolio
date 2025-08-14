@@ -2,58 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Modern Portfolio Design System 2025 - Feminine Soft Aesthetic */
+/* Professional Portfolio Design System 2025 - Corporate Business Aesthetic */
 
 @layer base {
   :root {
-    /* Soft feminine background palette */
-    --background: 330 25% 98%;
-    --foreground: 330 15% 15%;
+    /* Professional neutral background */
+    --background: 220 15% 98%;
+    --foreground: 220 15% 15%;
 
-    /* Glass card system */
-    --card: 330 30% 96%;
-    --card-foreground: 330 20% 20%;
+    /* Clean card system */
+    --card: 220 10% 96%;
+    --card-foreground: 220 15% 20%;
 
-    --popover: 330 25% 98%;
-    --popover-foreground: 330 15% 15%;
+    --popover: 220 15% 98%;
+    --popover-foreground: 220 15% 15%;
 
-    /* Primary blush palette */
-    --primary: 340 55% 75%;
+    /* Primary professional blue */
+    --primary: 215 80% 45%;
     --primary-foreground: 0 0% 100%;
-    --primary-soft: 340 45% 85%;
-    --primary-glow: 340 65% 85%;
+    --primary-soft: 215 60% 55%;
+    --primary-glow: 215 70% 60%;
 
-    /* Secondary lavender palette */
-    --secondary: 270 35% 88%;
-    --secondary-foreground: 270 25% 25%;
-    --secondary-soft: 270 25% 92%;
+    /* Secondary slate palette */
+    --secondary: 220 15% 85%;
+    --secondary-foreground: 220 20% 25%;
+    --secondary-soft: 220 10% 90%;
 
-    /* Muted beige tones */
-    --muted: 30 15% 94%;
-    --muted-foreground: 30 10% 45%;
+    /* Muted professional grays */
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 8% 45%;
 
-    /* Accent peach tones */
-    --accent: 20 45% 88%;
-    --accent-foreground: 20 35% 25%;
+    /* Accent deep blue */
+    --accent: 210 85% 40%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 65% 70%;
+    --destructive: 0 65% 55%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Soft borders and inputs */
-    --border: 330 20% 90%;
-    --input: 330 20% 92%;
-    --ring: 340 55% 75%;
+    /* Professional borders and inputs */
+    --border: 220 15% 88%;
+    --input: 220 15% 90%;
+    --ring: 215 80% 45%;
 
     --radius: 1rem;
 
-    /* Gradients for modern backgrounds */
+    /* Professional gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary-soft)), hsl(var(--primary-glow)));
-    --gradient-hero: linear-gradient(135deg, hsl(330 30% 95%), hsl(340 40% 92%), hsl(270 25% 94%));
-    --gradient-glass: linear-gradient(135deg, hsla(330, 30%, 100%, 0.25), hsla(340, 40%, 95%, 0.15));
+    --gradient-hero: linear-gradient(135deg, hsl(220 15% 96%), hsl(215 20% 94%), hsl(210 15% 96%));
+    --gradient-glass: linear-gradient(135deg, hsla(220, 15%, 100%, 0.25), hsla(215, 20%, 95%, 0.15));
     
-    /* Glass morphism effects */
-    --glass-border: hsla(330, 30%, 100%, 0.2);
-    --glass-shadow: 0 8px 32px hsla(340, 25%, 50%, 0.1);
+    /* Professional glass effects */
+    --glass-border: hsla(220, 15%, 100%, 0.2);
+    --glass-shadow: 0 8px 32px hsla(215, 25%, 50%, 0.1);
     --glass-backdrop: blur(12px);
 
     /* Animation transitions */

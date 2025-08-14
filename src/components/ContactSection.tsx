@@ -47,8 +47,8 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "sanajana.paluru@email.com",
-      link: "mailto:sanajana.paluru@email.com"
+      value: "sanjana.paluru@email.com",
+      link: "mailto:sanjana.paluru@email.com"
     },
     {
       icon: MapPin,
@@ -68,19 +68,19 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       label: "LinkedIn",
-      link: "https://linkedin.com/in/sanajana-paluru",
+      link: "https://linkedin.com/in/sanjana-paluru",
       color: "hover:text-blue-600"
     },
     {
       icon: Github,
       label: "GitHub",
-      link: "https://github.com/sanajana-paluru",
+      link: "https://github.com/sanjana-paluru",
       color: "hover:text-gray-800"
     },
     {
       icon: Mail,
       label: "Email",
-      link: "mailto:sanajana.paluru@email.com",
+      link: "mailto:sanjana.paluru@email.com",
       color: "hover:text-red-500"
     }
   ];
