@@ -1,34 +1,66 @@
+import React from "react";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, BarChart3, Brain, TrendingUp } from "lucide-react";
+import { ExternalLink, Github, BarChart3, Brain, TrendingUp, Rocket, MessageSquare, Leaf, Briefcase, Activity } from "lucide-react";
 
 const ProjectsSection = () => {
+  const iconMap = {
+    Rocket,
+    MessageSquare,
+    Leaf,
+    Briefcase,
+    Activity,
+  };
+
   const projects = [
     {
-      title: "Customer Churn Prediction",
-      description: "Machine learning model to predict customer churn using Python and scikit-learn. Achieved 87% accuracy with feature engineering and ensemble methods.",
-      technologies: ["Python", "Scikit-learn", "Pandas", "Streamlit"],
-      icon: Brain,
+      title: "Predicting Startup Success and Revenue",
+      description: "Applied machine learning and data mining to predict startup success/failure, estimate revenue, cluster startups, and simulate investor–startup recommendations using a dataset of 5,000 startups.",
+      technologies: ["Python", "Scikit-learn", "Keras", "Statsmodels", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Surprise"],
+      icon: "Rocket",
       color: "text-primary",
       bgColor: "bg-primary/10",
-      category: "Machine Learning"
+      category: "Machine Learning",
+      github: "https://github.com/sanjanapaluru/Predicting-Startup-Success-and-Revenue-with-Machine-Learning"
     },
     {
-      title: "Sales Dashboard Analytics",
-      description: "Interactive Tableau dashboard for sales performance analysis with real-time KPI tracking and trend visualization for business insights.",
-      technologies: ["Tableau", "SQL", "Excel", "Data Visualization"],
-      icon: BarChart3,
+      title: "Customer Review Sentiment Analysis",
+      description: "Comprehensive sentiment analysis system for customer reviews using multiple deep learning architectures (NBoW, LSTM, CNN, BERT) with PyTorch and modern NLP techniques.",
+      technologies: ["Python", "PyTorch", "Transformers", "NLTK", "Matplotlib", "Amazon Reviews Dataset"],
+      icon: "MessageSquare",
       color: "text-secondary",
       bgColor: "bg-secondary/10",
-      category: "Data Visualization"
+      category: "Natural Language Processing",
+      github: "https://github.com/sanjanapaluru/review-sentiment-analysis"
     },
     {
-      title: "Stock Price Predictor",
-      description: "Time series analysis and LSTM neural network to predict stock prices. Includes data preprocessing, feature scaling, and model evaluation.",
-      technologies: ["Python", "TensorFlow", "Pandas", "Matplotlib"],
-      icon: TrendingUp,
+      title: "AgTech - Crop Recommendation System",
+      description: "End-to-end machine learning system that recommends optimal crops based on soil and climate data, with interactive Tableau dashboards for farmers' decision-making.",
+      technologies: ["Python", "Pandas", "Scikit-learn", "SQL", "Tableau", "Google Colab"],
+      icon: "Leaf",
       color: "text-accent",
       bgColor: "bg-accent/10",
-      category: "Deep Learning"
+      category: "Applied Machine Learning",
+      github: "https://github.com/sanjanapaluru/AgTech"
+    },
+    {
+      title: "Business Analyst Job Market Insights",
+      description: "Analyzed job postings across industries to uncover salary trends, hiring cycles, remote/hybrid work evolution, and applied NLP-based intelligent web scraping for insights.",
+      technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "BeautifulSoup", "Requests"],
+      icon: "Briefcase",
+      color: "text-primary",
+      bgColor: "bg-primary/10",
+      category: "Data Analytics",
+      github: "https://github.com/sanjanapaluru/business-analyst-job-analysis"
+    },
+    {
+      title: "Real-Time Sensor Dashboard with Smart Alerts",
+      description: "Developed a real-time dashboard that connects to BMC via Redfish API, visualizes sensor data (temperature, fan speed, voltage), and triggers smart alerts with Slack integration.",
+      technologies: ["Python", "Plotly", "Redfish API", "Slack Webhooks"],
+      icon: "Activity",
+      color: "text-secondary",
+      bgColor: "bg-secondary/10",
+      category: "IoT & Dashboards",
+      github: "https://github.com/Axiado-Hackathon/axiado-hackathon-repo-data-tech"
     }
   ];
 
@@ -57,7 +89,7 @@ const ProjectsSection = () => {
                 {/* Project header */}
                 <div className="flex items-center justify-between mb-4">
                   <div className={`w-12 h-12 rounded-xl ${project.bgColor} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <project.icon className={`w-6 h-6 ${project.color}`} />
+                    {iconMap[project.icon as keyof typeof iconMap] && React.createElement(iconMap[project.icon as keyof typeof iconMap], { className: "w-7 h-7" })}
                   </div>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${project.bgColor} ${project.color}`}>
                     {project.category}
@@ -87,12 +119,13 @@ const ProjectsSection = () => {
 
                 {/* Action buttons */}
                 <div className="flex gap-3">
-                  <Button variant="ghost" size="sm" className="flex-1">
-                    <ExternalLink className="w-4 h-4" />
-                    Live Demo
-                  </Button>
-                  <Button variant="ghost" size="sm" className="flex-1">
-                    <Github className="w-4 h-4" />
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="flex-1"
+                    onClick={() => window.open(project.github, '_blank')}
+                  >
+                    <Github className="w-4 h-4 mr-2" />
                     Code
                   </Button>
                 </div>
@@ -105,11 +138,14 @@ const ProjectsSection = () => {
             <p className="text-lg text-muted-foreground mb-6">
               Want to see more of my work?
             </p>
-            <Button variant="cta" size="lg" className="px-8">
-              <Github className="w-5 h-5" />
-              <a href="https://github.com/sanjanapaluru">
-                View All Projects on GitHub
-              </a>
+            <Button 
+              variant="cta" 
+              size="lg" 
+              className="px-8"
+              onClick={() => window.open('https://github.com/sanjanapaluru?tab=repositories', '_blank')}
+            >
+              <Github className="w-5 h-5 mr-2" />
+              View All Projects on GitHub
             </Button>
           </div>
         </div>
